@@ -13,9 +13,9 @@
 
 ## 中文
 
-### Aegis Security Skill 是什么？
+### 简介
 
-Aegis Security Skill 是一套**本地离线、数据不出本机**的安全审查 **Skill 集合**（面向 AI 编码 Agent 的智能体技能体系设计，也可独立通过 CLI 脚本使用）。它通过命令行编排成熟的开源扫描器（semgrep、bandit、pip-audit、gitleaks、osv-scanner、reuse），合成统一的 **P0–P3** 报告，附带最小改动修复与发布前 gate，并提供 **AI 内容版权**检查器，按平台执行"一票否决"规则（如禁商用、禁下载）。
+Aegis Security Skill 是一套**本地离线、数据不出本机**的安全审查 **Skill 集合**（面向 AI 时代 Vibe coding 场景的 AI 编码 Agent 的智能体技能体系设计，也可独立通过 CLI 脚本使用）。它通过命令行编排成熟的开源扫描器（semgrep、bandit、pip-audit、gitleaks、osv-scanner、reuse），合成统一的 **P0–P3** 报告，附带最小改动修复与发布前 gate，并提供 **AI 内容版权**检查器，按平台执行"一票否决"规则（如禁商用、禁下载）。
 
 全部在本机运行，不上传任何数据。
 
@@ -63,10 +63,10 @@ pwsh skills/security-audit-common/install/install_tools.ps1
 
 自定义路径：先 `export SECURITY_TOOLS_HOME=/your/path`。
 
-**2. 把 skills 放进你的智能体技能目录**，例如 `~/.workbuddy/skills/`（或你所用平台的对应目录）：
+**2. 把 skills 放进你的智能体技能目录**（不同平台目录不同，如 `~/.workbuddy/skills/` 或你所用平台的对应目录）：
 
 ```bash
-cp -r skills/* ~/.workbuddy/skills/
+cp -r skills/* ~/.workbuddy/skills/   # 示例：WorkBuddy 平台
 ```
 
 ### 快速开始（CLI）
@@ -134,9 +134,9 @@ aegis-security-skill/
 
 ## English
 
-### What is Aegis Security Skill?
+### Overview
 
-Aegis Security Skill is a collection of offline, local-first security-audit **skills** for AI-assisted coding workflows (designed for agent skill systems, but usable standalone via its CLI scripts). It orchestrates well-known open-source scanners (semgrep, bandit, pip-audit, gitleaks, osv-scanner, reuse) via command line, synthesizes a unified **P0–P3** report with minimal-fix suggestions and a pre-release gate, and adds an **AI-content-copyright** checker that applies per-platform one-vote-veto rules (e.g. commercial-use bans).
+Aegis Security Skill is a collection of offline, local-first security-audit **skills** for AI-assisted coding workflows (designed for the Vibe coding era, for agent skill systems, but usable standalone via its CLI scripts). It orchestrates well-known open-source scanners (semgrep, bandit, pip-audit, gitleaks, osv-scanner, reuse) via command line, synthesizes a unified **P0–P3** report with minimal-fix suggestions and a pre-release gate, and adds an **AI-content-copyright** checker that applies per-platform one-vote-veto rules (e.g. commercial-use bans).
 
 Everything runs on your machine. Nothing is uploaded.
 
@@ -184,10 +184,10 @@ pwsh skills/security-audit-common/install/install_tools.ps1
 
 To use a custom location: `export SECURITY_TOOLS_HOME=/your/path` first.
 
-**2. Place the skills** into your agent's skills directory, e.g. `~/.workbuddy/skills/` (or your platform's equivalent):
+**2. Place the skills** into your agent's skills directory (the path differs per platform, e.g. `~/.workbuddy/skills/` or your platform's equivalent):
 
 ```bash
-cp -r skills/* ~/.workbuddy/skills/
+cp -r skills/* ~/.workbuddy/skills/   # example: WorkBuddy
 ```
 
 ### Quick start (CLI)
