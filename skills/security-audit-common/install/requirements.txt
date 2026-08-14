@@ -1,0 +1,7 @@
+# AegisKit security toolchain (pinned). Installed into $SECURITY_TOOLS_HOME/venv
+# by install_tools.sh / install_tools.ps1. Each tool retains its own license.
+semgrep==1.172.0
+bandit==1.9.4
+pip-audit==2.10.1
+reuse==6.2.0
+pyyaml

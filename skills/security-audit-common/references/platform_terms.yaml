@@ -1,0 +1,63 @@
+version: "2026-08-07"
+note: >
+  平台条款快照（D6）。裁决逻辑见 X1-X7冲突裁决附录.md。
+  X1-X3：OpenAI（用户拥有 Output / 可商用 / 可下载） vs Udio（平台保留 / 禁商用 / 禁下载）条款冲突
+  → 逐平台一票否决，不默认合规。
+  X5：FLUX dev 非商用许可状态待核（flux-nc / flux-com）。
+  X7：通义 / 混元等国产平台条款缺失 → 标记 unknown，转人工。
+update_policy: 季度重抓（U-05 / U-06）
+platforms:
+  OpenAI:
+    commercial_use: allowed
+    download_right: allowed
+    note: "用户拥有 Output，可商用、可下载（openai-terms）"
+    source: openai-terms
+    status: confirmed
+  Udio:
+    commercial_use: prohibited
+    download_right: prohibited
+    note: "平台保留权利，禁止商用、禁止下载（udio-tos）"
+    source: udio-tos
+    status: confirmed
+  Midjourney:
+    commercial_use: allowed
+    download_right: allowed
+    note: "付费用户拥有作品，可商用（midjourney-tos，需 Pro 订阅）"
+    source: midjourney-tos
+    status: confirmed
+  Suno:
+    commercial_use: allowed
+    download_right: allowed
+    note: "订阅用户可商用 / 下载（suno-terms）"
+    source: suno-terms
+    status: confirmed
+  Kling:
+    commercial_use: unknown
+    download_right: unknown
+    note: "待核（kling-agreement）"
+    source: kling-agreement
+    status: pending
+  Jimeng:
+    commercial_use: unknown
+    download_right: unknown
+    note: "待核（jimeng-agreement）"
+    source: jimeng-agreement
+    status: pending
+  Flux-dev:
+    commercial_use: unknown
+    download_right: unknown
+    note: "X5 非商用许可待核（flux-nc / flux-com）"
+    source: flux-nc
+    status: pending
+  Tongyi:
+    commercial_use: unknown
+    download_right: unknown
+    note: "X7 国产平台条款缺失"
+    source: aliyun-modelservice-terms
+    status: missing
+  Hunyuan:
+    commercial_use: unknown
+    download_right: unknown
+    note: "X7 国产平台条款缺失"
+    source: unknown
+    status: missing

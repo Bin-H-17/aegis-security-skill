@@ -1,0 +1,48 @@
+rules:
+  - id: python-hardcoded-credential
+    severity: ERROR
+    languages: [python]
+    pattern-regex: '(?i)(password|secret|api_key|apikey|token|access_key)\s*=\s*["\'][^"\']{6,}["\']'
+    message: "检测到疑似硬编码凭证，应使用环境变量或密钥管理注入"
+    metadata:
+      category: security
+      owasp: A05:2021
+
+  - id: python-eval-use
+    severity: WARNING
+    languages: [python]
+    pattern: eval(...)
+    message: "避免使用 eval，存在代码注入风险"
+    metadata:
+      category: security
+      owasp: A03:2021
+
+  - id: python-sql-format-string
+    severity: WARNING
+    languages: [python]
+    pattern-either:
+      - pattern: '"SELECT ... %s ..." % ...'
+      - pattern: '"SELECT ... {} ...".format(...)'
+      - pattern: 'f"SELECT ... {..."'
+    message: "避免字符串拼接 SQL，使用参数化查询"
+    metadata:
+      category: security
+      owasp: A03:2021
+
+  - id: js-hardcoded-secret
+    severity: ERROR
+    languages: [javascript, typescript]
+    pattern-regex: '(?i)(apikey|api_key|secret|token|password|access[_-]?key)\s*[:=]\s*["\'][^"\']{8,}["\']'
+    message: "检测到疑似硬编码密钥"
+    metadata:
+      category: security
+      owasp: A05:2021
+
+  - id: js-dangerouslysetinnerhtml
+    severity: WARNING
+    languages: [javascript, typescript]
+    pattern: dangerouslySetInnerHTML = ...
+    message: "避免直接注入 HTML，存在 XSS 风险"
+    metadata:
+      category: security
+      owasp: A03:2021

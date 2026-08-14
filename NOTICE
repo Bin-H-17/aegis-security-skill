@@ -1,0 +1,70 @@
+AegisKit — Third-Party Notices / 第三方声明
+==============================================
+
+AegisKit (this project) is licensed under the MIT License. See LICENSE.
+
+----------------------------------------------------------------------
+1. Open-source CLI tools invoked (not modified, not redistributed)
+----------------------------------------------------------------------
+AegisKit orchestrates the following independent open-source security tools
+purely via command-line invocation. It does NOT copy, modify, or redistribute
+their source code (this is a hard design rule to avoid license contamination,
+e.g. AGPL/LGPL). Each tool retains its own license:
+
+  - semgrep        (invoked via CLI; upstream license per its project)
+  - bandit         (invoked via CLI; upstream license per its project)
+  - pip-audit      (invoked via CLI; upstream license per its project)
+  - gitleaks       (invoked via CLI; upstream license per its project)
+  - osv-scanner    (invoked via CLI; upstream license per its project)
+  - reuse          (invoked via CLI; upstream license per its project)
+
+You are responsible for complying with each tool's license when you install
+and use them.
+
+----------------------------------------------------------------------
+2. Platform terms & official documentation (NOT redistributed)
+----------------------------------------------------------------------
+This repository does NOT contain verbatim copies of any third-party platform
+Terms of Service, EULAs, or official documentation. Redistributing such texts
+in full, even with attribution, may violate copyright.
+
+Instead, AegisKit ships only OUR OWN extracted compliance heuristics in
+  skills/security-audit-common/references/*.yaml
+(e.g. boolean flags such as `commercial_use: false` derived by us). These are
+original analysis, not the platforms' copyrighted prose.
+
+For the authoritative terms, always refer to the official sources:
+  - OpenAI:  https://openai.com/policies/
+  - Udio:    https://udio.com/terms  (and its licensing/usage policy)
+  - Google Play: https://play.google.com/console/about/play-policies/
+  - (and the respective official pages for any other platform)
+
+----------------------------------------------------------------------
+3. AI content copyright checker is heuristic
+----------------------------------------------------------------------
+The `ai-content-copyright` scenario encodes platform rules we extracted as
+keep-out / pass flags. It is a decision aid, not legal advice. Verify against
+the official platform terms before publishing or commercializing any content.
+
+======================================================================
+中文 / Chinese
+======================================================================
+AegisKit（本项目）基于 MIT 许可证发布，详见 LICENSE。
+
+1. 被调用的开源 CLI 工具（未修改、未再分发）
+   AegisKit 仅通过命令行调用下列独立开源安全工具，不复制、修改或再分发其
+   源代码（此为规避许可证传染的硬性设计规则）。各工具保留自身许可证：
+   semgrep / bandit / pip-audit / gitleaks / osv-scanner / reuse。
+   安装与使用这些工具时，请遵守各自的许可证。
+
+2. 平台条款与官方文档（未再分发）
+   本仓库不包含任何第三方平台服务条款、EULA 或官方文档的逐字原文。逐字
+   再分发此类文本（即便注明出处）可能存在版权风险。
+   AegisKit 仅附带我们自行提取的合规启发式规则（位于
+   skills/security-audit-common/references/*.yaml，如 `commercial_use: false`
+   等布尔标志），属原创分析，非平台受版权保护的原文。
+   权威条款请始终以官方来源为准（见上方英文链接）。
+
+3. AI 内容版权检查器为启发式
+   该场景的规则为我们提取的“禁止/通过”标志，仅为决策辅助，不构成法律意见。
+   在发布或商业化任何内容前，请以平台官方条款为准核验。

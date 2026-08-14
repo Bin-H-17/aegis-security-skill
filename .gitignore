@@ -1,0 +1,38 @@
+# AegisKit .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments (security toolchain venv)
+.venv/
+venv/
+env/
+*/venv/
+
+# Security toolchain binaries (installed via install_tools.*)
+security-tools/
+**/security-tools/
+*.exe
+
+# Generated audit reports ( produced at runtime )
+**/reports/
+reports/
+
+# Secrets / local env ( keep .env.example if you add one )
+.env
+*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Misc
+*.log
+.cache/

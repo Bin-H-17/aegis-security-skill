@@ -1,0 +1,15 @@
+title = "安全审查 Skill 集合 - gitleaks 基线"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "全局允许列表：文档 / 测试 / Mock / 报告产物，避免噪声误报"
+paths = [
+  '''.*\.md$''',
+  '''(?i).*test.*''',
+  '''(?i).*mock.*''',
+  '''.*/reports/.*''',
+  '''.*/node_modules/.*''',
+  '''.*/\.git/.*''',
+]

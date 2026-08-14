@@ -1,0 +1,34 @@
+version: "2026-08-07"
+note: >
+  应用商店上架政策快照（D5）。自动化核对仅为辅助，法律要件（国内三证 / ICP / 软著 / 版号）必须人工确认。
+markets:
+  googleplay:
+    data_safety_form:
+      requirement: "填写数据安全表单（数据类型 / 用途 / 是否加密）"
+      auto_checkable: false
+      note: "需人工在 Play Console 填写"
+    permissions:
+      requirement: "权限最小化，危险权限需提供理由"
+      auto_checkable: true
+      note: "可扫描 AndroidManifest 比对"
+    target_api_level:
+      requirement: "满足最新 target API 级别要求"
+      auto_checkable: true
+      note: "X6 Play target API 36（2026-08-31）待精读确认"
+    privacy_policy:
+      requirement: "提供隐私政策链接"
+      auto_checkable: false
+      note: "需人工提供"
+  appstore_cn:
+    san_zheng:
+      requirement: "国内三证（ICP 备案 / 软著 / 相关行业资质）"
+      auto_checkable: false
+      note: "法律要件，必须人工"
+    age_rating:
+      requirement: "版署版号 / 年龄分级"
+      auto_checkable: false
+      note: "必须人工"
+    data_export:
+      requirement: "数据出境安全评估（如涉及）"
+      auto_checkable: false
+      note: "合规要件，转人工"
