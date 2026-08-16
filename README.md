@@ -8,6 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Platform: Cross-platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-blue.svg)](#)
 [![Offline](https://img.shields.io/badge/Data%20Egress-None-success.svg)](#)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/Bin-H-17/aegis-security-skill/badge)](https://securityscorecards.dev/viewer/?uri=github.com/Bin-H-17/aegis-security-skill)
 
 ---
 
